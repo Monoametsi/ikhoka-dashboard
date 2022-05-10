@@ -1,0 +1,29 @@
+<div class="card" style="min-width:50rem;">
+    <h5 class="card-header">Featured</h5>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Comments File</th>
+                <th scope="col">Mover Mentions</th>
+                <th scope="col">Shaker Mentions</th>
+                <th scope="col">Questions</th>
+                <th scope="col">Spam</th>
+                <th scope="col">Less than 15 characters</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="data">
+              <tr *ngFor="let reportResult of data; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ reportResult.fileName }}</td>
+                <td>{{ reportResult.amountOfMoverMentions  }}</td>
+                <td>{{ reportResult.amountOfShakerMentions  }}</td>
+                <td>{{ reportResult.amountOfQuestions  }}</td>
+                <td>{{ reportResult.amountOfSpams }}</td>
+                <td>{{ reportResult.lessThan15  }}</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

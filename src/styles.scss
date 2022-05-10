@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-icons/font/bootstrap-icons.scss';
+
+.scroll-x {
+    overflow-x: scroll;
+}
+
+
+#sidenav {
+    height: 100vh;
+    width: 200px;
+
+    li {
+        @extend .my-3;
+    }
+    a {
+        @extend .text-decoration-none;
+        @extend .text-dark;
+    }
+    a:hover {
+        @extend .text-primary;
+    }
+}
+#table-container {
+    overflow-x: scroll;
+}

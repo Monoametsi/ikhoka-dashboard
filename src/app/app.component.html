@@ -1,0 +1,20 @@
+<header class="d-flex justify-content-center align-items-center bg-light text-center p-2 border">
+  <h5 class="m-0 fs-2">Admin Dashboard</h5>
+</header>
+<div class="d-flex">
+  <app-sidenav></app-sidenav>
+  <main id="main-panel" class="p-4 scroll-x">
+    <h2 class="my-3">Daily Averages</h2>
+
+    <div class="scroll-x d-flex my-2">
+      <app-summary-card title="Mentions of Mover" [averageAmount]="moverMentions"></app-summary-card>
+      <app-summary-card title="Mentions of Shaker" [averageAmount]="shakeMentions"></app-summary-card>
+      <app-summary-card title="Spams" [averageAmount]="spams"></app-summary-card>
+      <app-summary-card title="Questions" [averageAmount]="questions"></app-summary-card>
+      <app-summary-card title="Less than 15 characters" [averageAmount]="lessThan15"></app-summary-card>
+    </div>
+    <div class="mt-4"  id="table-container">
+      <app-table></app-table>
+    </div>
+  </main>  
+</div>
